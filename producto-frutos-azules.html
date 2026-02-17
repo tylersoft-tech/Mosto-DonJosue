@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mosto Frutos Azules — Arándanos, Agraz y Uvas | Mosto Don Josué</title>
+    <meta name="description"
+        content="Mosto Frutos Azules: la fusión perfecta de arándanos, agraz y uvas. 100% natural, sin colorantes ni azúcares añadidos. Disponible en 250ml, 460ml y 1000ml.">
+    <link rel="icon" href="assets/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="index.html" class="header__logo"><img src="assets/logo.png" alt="Mosto Don Josué" width="48"
+                    height="56"></a>
+            <nav class="nav" id="main-nav" aria-label="Navegación principal">
+                <div class="nav__item"><a href="index.html" class="nav__link">Inicio</a></div>
+                <div class="nav__item">
+                    <a href="productos.html" class="nav__link nav__has-sub active">Productos <span
+                            class="nav__toggle-sub">▼</span></a>
+                    <div class="nav__submenu">
+                        <a href="producto-frutos-azules.html" class="nav__link active">Mosto Frutos Azules</a>
+                        <a href="producto-arandanos.html" class="nav__link">Mosto de Arándanos</a>
+                        <a href="producto-curcuma.html" class="nav__link">Mosto Cúrcuma</a>
+                    </div>
+                </div>
+                <div class="nav__item"><a href="nosotros.html" class="nav__link">Nosotros</a></div>
+                <div class="nav__item"><a href="franquicias.html" class="nav__link">Franquicias</a></div>
+                <div class="nav__item"><a href="contacto.html" class="nav__link">Contacto</a></div>
+            </nav>
+            <div class="header__actions">
+                <button class="dark-toggle" aria-label="Cambiar modo oscuro">🌙</button>
+                <a href="carrito.html" class="cart-btn" aria-label="Ver carrito">🛒<span class="cart-badge">0</span></a>
+                <button class="hamburger" id="hamburger"
+                    aria-label="Abrir menú"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="product-hero section">
+            <div class="container">
+                <!-- Breadcrumb -->
+                <div class="breadcrumb" style="grid-column: 1 / -1;">
+                    <a href="index.html">Inicio</a> <span>›</span>
+                    <a href="productos.html">Productos</a> <span>›</span>
+                    <strong>Mosto Frutos Azules</strong>
+                </div>
+            </div>
+            <div class="container">
+                <!-- Gallery -->
+                <div class="product-gallery fade-in fade-in-left">
+                    <img src="assets/logo.png" alt="Mosto Frutos Azules — Botella" id="product-main-img" width="350"
+                        height="450">
+                </div>
+
+                <!-- Info -->
+                <div class="product-info fade-in fade-in-right">
+                    <h1>Mosto Frutos Azules</h1>
+                    <p class="lead">La fusión premium de arándanos, agraz y uvas. Sin colorantes artificiales, sin
+                        saborizantes añadidos, sin azúcares procesados. Una bebida nutracéutica artesanal con más de
+                        6.000 años de tradición.</p>
+
+                    <!-- Volume Selector -->
+                    <div class="volume-selector" id="volume-selector">
+                        <button class="volume-btn" data-volume="250ml" data-price="9000">250 ml</button>
+                        <button class="volume-btn" data-volume="460ml" data-price="19000">460 ml</button>
+                        <button class="volume-btn active" data-volume="1000ml" data-price="38000">1000 ml</button>
+                    </div>
+
+                    <!-- Price -->
+                    <div class="product-price" id="product-price">$38.000</div>
+
+                    <!-- Quantity -->
+                    <div class="product-qty">
+                        <span style="font-weight:600; color:var(--text-primary);">Cantidad:</span>
+                        <div class="qty-control">
+                            <button class="qty-btn" id="qty-minus" aria-label="Reducir cantidad">−</button>
+                            <input type="number" class="qty-input" id="qty-input" value="1" min="1" max="50"
+                                aria-label="Cantidad">
+                            <button class="qty-btn" id="qty-plus" aria-label="Aumentar cantidad">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Add to cart -->
+                    <button class="btn btn-primary btn-lg" id="add-to-cart-btn"
+                        style="width:100%; margin-bottom: var(--space-xl);">
+                        🛒 Agregar al Carrito
+                    </button>
+
+                    <!-- Benefits -->
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🫐</div>
+                            <div>
+                                <h4>Rico en Antioxidantes</h4>
+                                <p>Los frutos azules son una potente fuente de antocianinas, que protegen las células
+                                    del envejecimiento.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🩸</div>
+                            <div>
+                                <h4>Fortalece Plaquetas</h4>
+                                <p>Contribuye al aumento natural de plaquetas y hemoglobina en el organismo.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🛡️</div>
+                            <div>
+                                <h4>Refuerza las Defensas</h4>
+                                <p>Potencia el sistema inmunológico con vitaminas y minerales esenciales.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🚫</div>
+                            <div>
+                                <h4>Sin Aditivos</h4>
+                                <p>Cero colorantes artificiales, cero saborizantes, cero azúcares añadidos.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nutrition Table -->
+                    <table class="nutrition-table">
+                        <caption>Información Nutricional (por 250ml)</caption>
+                        <thead>
+                            <tr>
+                                <th>Nutriente</th>
+                                <th>Cantidad</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Calorías</td>
+                                <td>85 kcal</td>
+                            </tr>
+                            <tr>
+                                <td>Carbohidratos totales</td>
+                                <td>20 g</td>
+                            </tr>
+                            <tr>
+                                <td>Azúcares naturales</td>
+                                <td>16 g</td>
+                            </tr>
+                            <tr>
+                                <td>Fibra dietaria</td>
+                                <td>2 g</td>
+                            </tr>
+                            <tr>
+                                <td>Vitamina C</td>
+                                <td>25% VD</td>
+                            </tr>
+                            <tr>
+                                <td>Vitamina K</td>
+                                <td>15% VD</td>
+                            </tr>
+                            <tr>
+                                <td>Antocianinas</td>
+                                <td>120 mg</td>
+                            </tr>
+                            <tr>
+                                <td>Potasio</td>
+                                <td>180 mg</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand"><img src="assets/logo.png" alt="Mosto Don Josué" width="50" height="58">
+                    <p>Bebidas nutracéuticas artesanales. 100% natural.</p>
+                </div>
+                <div>
+                    <h4>Navegación</h4>
+                    <div class="footer__links"><a href="index.html">Inicio</a><a href="productos.html">Productos</a><a
+                            href="nosotros.html">Nosotros</a><a href="franquicias.html">Franquicias</a><a
+                            href="contacto.html">Contacto</a></div>
+                </div>
+                <div>
+                    <h4>Productos</h4>
+                    <div class="footer__links"><a href="producto-frutos-azules.html">Frutos Azules</a><a
+                            href="producto-arandanos.html">Arándanos Puro</a><a href="producto-curcuma.html">Cúrcuma</a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Sedes</h4>
+                    <div class="footer__links"><a href="franquicias.html">Barrancabermeja</a><a
+                            href="franquicias.html">Bogotá</a><a href="franquicias.html">Medellín</a><a
+                            href="franquicias.html">Cali</a><a href="franquicias.html">Bucaramanga</a></div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Mosto Don Josué®. Todos los derechos reservados. 🇨🇴</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/573001234567" class="whatsapp-float" target="_blank" rel="noopener"
+        aria-label="WhatsApp">💬</a>
+    <button class="scroll-top" aria-label="Volver arriba">↑</button>
+
+    <script src="js/theme.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/checkout.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Product Page Logic -->
+    <script>
+        (function () {
+            const PRODUCT = {
+                id: 'frutos-azules',
+                name: 'Mosto Frutos Azules',
+                image: 'assets/logo.png'
+            };
+
+            let selectedVolume = '1000ml';
+            let selectedPrice = 38000;
+            let qty = 1;
+
+            const volumeSelector = document.getElementById('volume-selector');
+            const priceEl = document.getElementById('product-price');
+            const qtyInput = document.getElementById('qty-input');
+            const qtyMinus = document.getElementById('qty-minus');
+            const qtyPlus = document.getElementById('qty-plus');
+            const addBtn = document.getElementById('add-to-cart-btn');
+
+            // Volume buttons
+            volumeSelector.addEventListener('click', (e) => {
+                const btn = e.target.closest('.volume-btn');
+                if (!btn) return;
+                volumeSelector.querySelectorAll('.volume-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                selectedVolume = btn.dataset.volume;
+                selectedPrice = parseInt(btn.dataset.price);
+                priceEl.textContent = Cart.formatPrice(selectedPrice);
+            });
+
+            // Quantity
+            qtyMinus.addEventListener('click', () => { qty = Math.max(1, qty - 1); qtyInput.value = qty; });
+            qtyPlus.addEventListener('click', () => { qty = Math.min(50, qty + 1); qtyInput.value = qty; });
+            qtyInput.addEventListener('change', () => { qty = Math.max(1, Math.min(50, parseInt(qtyInput.value) || 1)); qtyInput.value = qty; });
+
+            // Add to cart
+            addBtn.addEventListener('click', () => {
+                Cart.add({
+                    id: PRODUCT.id,
+                    name: PRODUCT.name,
+                    volume: selectedVolume,
+                    price: selectedPrice,
+                    image: PRODUCT.image,
+                    qty: qty
+                });
+            });
+        })();
+    </script>
+</body>
+
+</html>

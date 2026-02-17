@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos — Mosto Don Josué</title>
+    <meta name="description"
+        content="Catálogo completo de bebidas nutracéuticas Mosto Don Josué: Frutos Azules, Arándanos Puros y Cúrcuma. Disponibles en 250ml, 460ml y 1000ml.">
+    <link rel="icon" href="assets/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="index.html" class="header__logo"><img src="assets/logo.png" alt="Mosto Don Josué" width="48"
+                    height="56"></a>
+            <nav class="nav" id="main-nav" aria-label="Navegación principal">
+                <div class="nav__item"><a href="index.html" class="nav__link">Inicio</a></div>
+                <div class="nav__item">
+                    <a href="productos.html" class="nav__link nav__has-sub active">Productos <span
+                            class="nav__toggle-sub">▼</span></a>
+                    <div class="nav__submenu">
+                        <a href="producto-frutos-azules.html" class="nav__link">Mosto Frutos Azules</a>
+                        <a href="producto-arandanos.html" class="nav__link">Mosto de Arándanos</a>
+                        <a href="producto-curcuma.html" class="nav__link">Mosto Cúrcuma</a>
+                    </div>
+                </div>
+                <div class="nav__item"><a href="nosotros.html" class="nav__link">Nosotros</a></div>
+                <div class="nav__item"><a href="franquicias.html" class="nav__link">Franquicias</a></div>
+                <div class="nav__item"><a href="contacto.html" class="nav__link">Contacto</a></div>
+            </nav>
+            <div class="header__actions">
+                <button class="dark-toggle" aria-label="Cambiar modo oscuro">🌙</button>
+                <a href="carrito.html" class="cart-btn" aria-label="Ver carrito">🛒<span class="cart-badge">0</span></a>
+                <button class="hamburger" id="hamburger"
+                    aria-label="Abrir menú"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Nuestros Productos</h1>
+                <p class="lead">Bebidas nutracéuticas 100% naturales elaboradas artesanalmente con frutos azules
+                    colombianos.</p>
+            </div>
+        </section>
+
+        <!-- Product Grid -->
+        <section class="section">
+            <div class="container">
+                <div class="grid-3 stagger">
+
+                    <!-- Mosto Frutos Azules -->
+                    <div class="card fade-in" style="--i:0">
+                        <div class="card__image">
+                            <img src="assets/logo.png" alt="Mosto Frutos Azules — Arándanos, Agraz y Uvas"
+                                loading="lazy" width="300" height="225">
+                        </div>
+                        <div class="card__body">
+                            <h3 class="card__title">Mosto Frutos Azules</h3>
+                            <p style="font-size:.88rem; color:var(--text-secondary); margin-bottom:var(--space-sm);">
+                                Arándanos, Agraz y Uvas</p>
+                            <p class="card__price">Desde $9.000</p>
+                            <p style="font-size:.82rem; color:var(--text-secondary); margin-bottom:var(--space-md);">
+                                250ml $9.000 · 460ml $19.000 · 1000ml $38.000</p>
+                            <div class="card__actions">
+                                <a href="producto-frutos-azules.html" class="btn btn-primary btn-sm">Ver Producto</a>
+                                <button class="btn btn-secondary btn-sm"
+                                    onclick="Cart.add({id:'frutos-azules',name:'Mosto Frutos Azules',volume:'1000ml',price:38000,image:'assets/logo.png',qty:1})">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mosto de Arándanos -->
+                    <div class="card fade-in" style="--i:1">
+                        <div class="card__image">
+                            <img src="assets/logo.png" alt="Mosto Puro de Arándanos" loading="lazy" width="300"
+                                height="225">
+                        </div>
+                        <div class="card__body">
+                            <h3 class="card__title">Mosto de Arándanos</h3>
+                            <p style="font-size:.88rem; color:var(--text-secondary); margin-bottom:var(--space-sm);">
+                                Arándanos puros seleccionados</p>
+                            <p class="card__price">Desde $9.000</p>
+                            <p style="font-size:.82rem; color:var(--text-secondary); margin-bottom:var(--space-md);">
+                                250ml $9.000 · 460ml $19.000 · 1000ml $38.000</p>
+                            <div class="card__actions">
+                                <a href="producto-arandanos.html" class="btn btn-primary btn-sm">Ver Producto</a>
+                                <button class="btn btn-secondary btn-sm"
+                                    onclick="Cart.add({id:'arandanos',name:'Mosto de Arándanos',volume:'1000ml',price:38000,image:'assets/logo.png',qty:1})">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mosto Cúrcuma -->
+                    <div class="card fade-in" style="--i:2">
+                        <div class="card__image">
+                            <img src="assets/logo.png" alt="Mosto Cúrcuma — Uvas y Arándanos" loading="lazy" width="300"
+                                height="225">
+                        </div>
+                        <div class="card__body">
+                            <h3 class="card__title">Mosto Cúrcuma</h3>
+                            <p style="font-size:.88rem; color:var(--text-secondary); margin-bottom:var(--space-sm);">
+                                Cúrcuma con Uvas y Arándanos</p>
+                            <p class="card__price">Desde $9.000</p>
+                            <p style="font-size:.82rem; color:var(--text-secondary); margin-bottom:var(--space-md);">
+                                250ml $9.000 · 460ml $19.000 · 1000ml $38.000</p>
+                            <div class="card__actions">
+                                <a href="producto-curcuma.html" class="btn btn-primary btn-sm">Ver Producto</a>
+                                <button class="btn btn-secondary btn-sm"
+                                    onclick="Cart.add({id:'curcuma',name:'Mosto Cúrcuma',volume:'1000ml',price:38000,image:'assets/logo.png',qty:1})">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <img src="assets/logo.png" alt="Mosto Don Josué" width="50" height="58">
+                    <p>Bebidas nutracéuticas artesanales. 100% natural.</p>
+                </div>
+                <div>
+                    <h4>Navegación</h4>
+                    <div class="footer__links"><a href="index.html">Inicio</a><a href="productos.html">Productos</a><a
+                            href="nosotros.html">Nosotros</a><a href="franquicias.html">Franquicias</a><a
+                            href="contacto.html">Contacto</a></div>
+                </div>
+                <div>
+                    <h4>Productos</h4>
+                    <div class="footer__links"><a href="producto-frutos-azules.html">Frutos Azules</a><a
+                            href="producto-arandanos.html">Arándanos Puro</a><a href="producto-curcuma.html">Cúrcuma</a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Sedes</h4>
+                    <div class="footer__links"><a href="franquicias.html">Barrancabermeja</a><a
+                            href="franquicias.html">Bogotá</a><a href="franquicias.html">Medellín</a><a
+                            href="franquicias.html">Cali</a><a href="franquicias.html">Bucaramanga</a></div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Mosto Don Josué®. Todos los derechos reservados. 🇨🇴</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/573001234567?text=Hola%2C%20quiero%20información%20sobre%20Mosto%20Don%20Josué"
+        class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">💬</a>
+    <button class="scroll-top" aria-label="Volver arriba">↑</button>
+
+    <script src="js/theme.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/checkout.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mosto de Arándanos Puro | Mosto Don Josué</title>
+    <meta name="description"
+        content="Mosto Puro de Arándanos: concentrado 100% natural de arándanos seleccionados. Sin aditivos. Disponible en 250ml, 460ml y 1000ml.">
+    <link rel="icon" href="assets/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header class="header" id="header">
+        <div class="container">
+            <a href="index.html" class="header__logo"><img src="assets/logo.png" alt="Mosto Don Josué" width="48"
+                    height="56"></a>
+            <nav class="nav" id="main-nav" aria-label="Navegación principal">
+                <div class="nav__item"><a href="index.html" class="nav__link">Inicio</a></div>
+                <div class="nav__item">
+                    <a href="productos.html" class="nav__link nav__has-sub active">Productos <span
+                            class="nav__toggle-sub">▼</span></a>
+                    <div class="nav__submenu">
+                        <a href="producto-frutos-azules.html" class="nav__link">Mosto Frutos Azules</a>
+                        <a href="producto-arandanos.html" class="nav__link active">Mosto de Arándanos</a>
+                        <a href="producto-curcuma.html" class="nav__link">Mosto Cúrcuma</a>
+                    </div>
+                </div>
+                <div class="nav__item"><a href="nosotros.html" class="nav__link">Nosotros</a></div>
+                <div class="nav__item"><a href="franquicias.html" class="nav__link">Franquicias</a></div>
+                <div class="nav__item"><a href="contacto.html" class="nav__link">Contacto</a></div>
+            </nav>
+            <div class="header__actions">
+                <button class="dark-toggle" aria-label="Cambiar modo oscuro">🌙</button>
+                <a href="carrito.html" class="cart-btn" aria-label="Ver carrito">🛒<span class="cart-badge">0</span></a>
+                <button class="hamburger" id="hamburger"
+                    aria-label="Abrir menú"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="product-hero section">
+            <div class="container">
+                <div class="breadcrumb" style="grid-column: 1 / -1;">
+                    <a href="index.html">Inicio</a> <span>›</span>
+                    <a href="productos.html">Productos</a> <span>›</span>
+                    <strong>Mosto de Arándanos</strong>
+                </div>
+            </div>
+            <div class="container">
+                <div class="product-gallery fade-in fade-in-left">
+                    <img src="assets/logo.png" alt="Mosto de Arándanos Puro" width="350" height="450">
+                </div>
+
+                <div class="product-info fade-in fade-in-right">
+                    <h1>Mosto de Arándanos</h1>
+                    <p class="lead">Concentrado puro de arándanos seleccionados. Elaborado artesanalmente siguiendo el
+                        proceso milenario del mosto. Sin colorantes, sin azúcares añadidos, potencia pura para tu
+                        organismo.</p>
+
+                    <div class="volume-selector" id="volume-selector">
+                        <button class="volume-btn" data-volume="250ml" data-price="9000">250 ml</button>
+                        <button class="volume-btn" data-volume="460ml" data-price="19000">460 ml</button>
+                        <button class="volume-btn active" data-volume="1000ml" data-price="38000">1000 ml</button>
+                    </div>
+
+                    <div class="product-price" id="product-price">$38.000</div>
+
+                    <div class="product-qty">
+                        <span style="font-weight:600; color:var(--text-primary);">Cantidad:</span>
+                        <div class="qty-control">
+                            <button class="qty-btn" id="qty-minus" aria-label="Reducir cantidad">−</button>
+                            <input type="number" class="qty-input" id="qty-input" value="1" min="1" max="50"
+                                aria-label="Cantidad">
+                            <button class="qty-btn" id="qty-plus" aria-label="Aumentar cantidad">+</button>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary btn-lg" id="add-to-cart-btn"
+                        style="width:100%; margin-bottom: var(--space-xl);">
+                        🛒 Agregar al Carrito
+                    </button>
+
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🫐</div>
+                            <div>
+                                <h4>Arándanos Puros</h4>
+                                <p>Concentrado exclusivo de arándanos de la más alta calidad, sin mezclas adicionales.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">💜</div>
+                            <div>
+                                <h4>Máximo Poder Antioxidante</h4>
+                                <p>La mayor concentración de antocianinas por porción de toda nuestra línea.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">❤️</div>
+                            <div>
+                                <h4>Salud Cardiovascular</h4>
+                                <p>Favorece la circulación sanguínea y apoya la salud del corazón.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">👁️</div>
+                            <div>
+                                <h4>Protege la Visión</h4>
+                                <p>Los arándanos son reconocidos por sus beneficios para la salud ocular.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <table class="nutrition-table">
+                        <caption>Información Nutricional (por 250ml)</caption>
+                        <thead>
+                            <tr>
+                                <th>Nutriente</th>
+                                <th>Cantidad</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Calorías</td>
+                                <td>78 kcal</td>
+                            </tr>
+                            <tr>
+                                <td>Carbohidratos totales</td>
+                                <td>18 g</td>
+                            </tr>
+                            <tr>
+                                <td>Azúcares naturales</td>
+                                <td>14 g</td>
+                            </tr>
+                            <tr>
+                                <td>Fibra dietaria</td>
+                                <td>3 g</td>
+                            </tr>
+                            <tr>
+                                <td>Vitamina C</td>
+                                <td>30% VD</td>
+                            </tr>
+                            <tr>
+                                <td>Vitamina K</td>
+                                <td>18% VD</td>
+                            </tr>
+                            <tr>
+                                <td>Antocianinas</td>
+                                <td>150 mg</td>
+                            </tr>
+                            <tr>
+                                <td>Manganeso</td>
+                                <td>25% VD</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand"><img src="assets/logo.png" alt="Mosto Don Josué" width="50" height="58">
+                    <p>Bebidas nutracéuticas artesanales. 100% natural.</p>
+                </div>
+                <div>
+                    <h4>Navegación</h4>
+                    <div class="footer__links"><a href="index.html">Inicio</a><a href="productos.html">Productos</a><a
+                            href="nosotros.html">Nosotros</a><a href="franquicias.html">Franquicias</a><a
+                            href="contacto.html">Contacto</a></div>
+                </div>
+                <div>
+                    <h4>Productos</h4>
+                    <div class="footer__links"><a href="producto-frutos-azules.html">Frutos Azules</a><a
+                            href="producto-arandanos.html">Arándanos Puro</a><a href="producto-curcuma.html">Cúrcuma</a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Sedes</h4>
+                    <div class="footer__links"><a href="franquicias.html">Barrancabermeja</a><a
+                            href="franquicias.html">Bogotá</a><a href="franquicias.html">Medellín</a><a
+                            href="franquicias.html">Cali</a><a href="franquicias.html">Bucaramanga</a></div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Mosto Don Josué®. Todos los derechos reservados. 🇨🇴</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/573001234567" class="whatsapp-float" target="_blank" rel="noopener"
+        aria-label="WhatsApp">💬</a>
+    <button class="scroll-top" aria-label="Volver arriba">↑</button>
+
+    <script src="js/theme.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/checkout.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        (function () {
+            const PRODUCT = { id: 'arandanos', name: 'Mosto de Arándanos', image: 'assets/logo.png' };
+            let selectedVolume = '1000ml', selectedPrice = 38000, qty = 1;
+            const volumeSelector = document.getElementById('volume-selector');
+            const priceEl = document.getElementById('product-price');
+            const qtyInput = document.getElementById('qty-input');
+
+            volumeSelector.addEventListener('click', (e) => {
+                const btn = e.target.closest('.volume-btn');
+                if (!btn) return;
+                volumeSelector.querySelectorAll('.volume-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                selectedVolume = btn.dataset.volume;
+                selectedPrice = parseInt(btn.dataset.price);
+                priceEl.textContent = Cart.formatPrice(selectedPrice);
+            });
+
+            document.getElementById('qty-minus').addEventListener('click', () => { qty = Math.max(1, qty - 1); qtyInput.value = qty; });
+            document.getElementById('qty-plus').addEventListener('click', () => { qty = Math.min(50, qty + 1); qtyInput.value = qty; });
+            qtyInput.addEventListener('change', () => { qty = Math.max(1, Math.min(50, parseInt(qtyInput.value) || 1)); qtyInput.value = qty; });
+
+            document.getElementById('add-to-cart-btn').addEventListener('click', () => {
+                Cart.add({ id: PRODUCT.id, name: PRODUCT.name, volume: selectedVolume, price: selectedPrice, image: PRODUCT.image, qty });
+            });
+        })();
+    </script>
+</body>
+
+</html>
