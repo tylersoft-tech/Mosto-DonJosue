@@ -1,0 +1,14 @@
+/* TEAM */
+Creator: OpenAGI
+Site: https://openagi.com.co
+Role: Developer, Designer, Implementer
+Twitter: @OpenAGI_
+Location: Colombia
+
+/* SITE */
+Last update: 2026/02/17
+Language: Spanish
+Doctype: HTML5
+Standards: CSS3, ES6+
+Components: Custom Design, Glassmorphism, Animations
+Software: Custom AI Agent (Antigravity by OpenAGI)

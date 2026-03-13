@@ -9,15 +9,19 @@ const Theme = (() => {
         const saved = localStorage.getItem(STORAGE_KEY);
         if (saved) {
             document.documentElement.setAttribute('data-theme', saved);
-        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+            // Default to light mode always as per new requirements
+            document.documentElement.setAttribute('data-theme', 'light');
         }
         _updateIcon();
 
-        // Listen for system preference changes
+        // Listen for system preference changes (optional, but prioritize light)
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
             if (!localStorage.getItem(STORAGE_KEY)) {
-                document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+                // Even if system changes, we stick to light unless user toggled before? 
+                // Or we can respect it but user wants light default. 
+                // Let's just keep it simple: if no save, default light.
+                document.documentElement.setAttribute('data-theme', 'light');
                 _updateIcon();
             }
         });

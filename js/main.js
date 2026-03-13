@@ -56,4 +56,33 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    /* --- Quick Add Buttons --- */
+    document.querySelectorAll('.quick-add-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const product = {
+                id: btn.dataset.id,
+                name: btn.dataset.name,
+                price: parseInt(btn.dataset.price),
+                volume: btn.dataset.volume,
+                image: btn.dataset.image,
+                qty: 1
+            };
+
+            Cart.add(product);
+
+            // Optional: visual feedback button
+            const originalText = btn.textContent;
+            btn.textContent = '¡Agregado!';
+            btn.classList.add('btn-green'); // Assuming you have a green class or just style change
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.classList.remove('btn-green');
+            }, 1000);
+
+            // Auto open drawer
+            Cart.open();
+        });
+    });
 });

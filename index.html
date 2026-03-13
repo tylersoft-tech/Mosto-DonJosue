@@ -1,14 +1,81 @@
 <!DOCTYPE html>
 <html lang="es" data-theme="light">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mosto Don Josué — Bebidas Nutracéuticas Artesanales</title>
-  <meta name="description" content="Mosto Don Josué: bebidas artesanales 100% naturales de arándanos, agraz y uvas. Sin colorantes, sin saborizantes, sin azúcares añadidos. Potencia tu salud con la fusión milenaria del mosto.">
+  <meta name="description"
+    content="Mosto Don Josué: bebidas artesanales 100% naturales de arándanos, agraz y uvas. Sin colorantes, sin saborizantes, sin azúcares añadidos. Potencia tu salud con la fusión milenaria del mosto.">
   <meta name="keywords" content="mosto, arándanos, agraz, uvas, bebida natural, nutracéutico, artesanal, Colombia">
   <link rel="icon" href="assets/logo.png" type="image/png">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="canonical" href="https://mostodonjosue.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mostodonjosue.com/">
+  <meta property="og:title" content="Mosto Don Josué 🍇 | Sube tus Defensas 🛡️">
+  <meta property="og:description"
+    content="Bebidas 100% naturales de Arándanos, Agraz y Uva. Sin azúcar, sin alcohol. ¡Potencia tu salud hoy! 👇">
+  <meta property="og:image" content="https://mostodonjosue.com/assets/social-share.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mosto Don Josué 🍇 | Salud Natural">
+  <meta name="twitter:description" content="La fusión antioxidante más potente de Colombia. ¡Pide tu mosto aquí! 🍷">
+  <meta name="twitter:image" content="https://mostodonjosue.com/assets/social-share.png">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://mostodonjosue.com/#organization",
+        "name": "Mosto Don Josué",
+        "url": "https://mostodonjosue.com/",
+        "logo": "https://mostodonjosue.com/assets/logo.png",
+        "email": "contacto@mostodonjosue.com",
+        "description": "Bebidas nutracéuticas 100% naturales de arándanos, agraz y uvas.",
+        "brand": {
+            "@type": "Brand",
+            "name": "Mosto Don Josué"
+        },
+        "founder": {
+            "@type": "Person",
+            "name": "Don Josué"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+57-300-123-4567",
+          "contactType": "customer service",
+          "areaServed": "CO",
+          "availableLanguage": "Spanish"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://mostodonjosue.com/#website",
+        "url": "https://mostodonjosue.com/",
+        "name": "Mosto Don Josué",
+        "publisher": {
+          "@id": "https://mostodonjosue.com/#organization"
+        },
+        "creator": {
+            "@type": "Organization",
+            "name": "OpenAGI",
+            "url": "https://openagi.com.co"
+        }
+      }
+    ]
+  }
+  </script>
+  <!-- Umami Analytics -->
+  <script defer src="https://analytics.openagi.com/script.js" data-website-id="24740ea6-a1bb-490c-aa01-a66119e47dde"></script>
 </head>
+
 <body>
 
   <!-- ==================== HEADER ==================== -->
@@ -24,10 +91,65 @@
         </div>
         <div class="nav__item">
           <a href="productos.html" class="nav__link nav__has-sub">Productos <span class="nav__toggle-sub">▼</span></a>
-          <div class="nav__submenu">
-            <a href="producto-frutos-azules.html" class="nav__link">Mosto Frutos Azules</a>
-            <a href="producto-arandanos.html" class="nav__link">Mosto de Arándanos</a>
-            <a href="producto-curcuma.html" class="nav__link">Mosto Cúrcuma</a>
+          <div class="nav__megamenu">
+            <div class="container megamenu__grid">
+              <!-- Column 1: Featured Image / Promo -->
+              <div class="megamenu__col megamenu__featured">
+                <div class="megamenu__image">
+                  <img src="assets/logo.png" alt="Mosto Don Josué" width="200" height="200">
+                  <div class="megamenu__caption">
+                    <span>Nueva Cosecha</span>
+                    <h4>Edición Especial</h4>
+                    <a href="productos.html" class="link-arrow">Ver Todo →</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Column 2: Product Categories -->
+              <div class="megamenu__col">
+                <h4 class="megamenu__title">Nuestros Mostos</h4>
+                <ul class="megamenu__list">
+                  <li>
+                    <a href="producto-frutos-azules.html" class="megamenu__item">
+                      <div class="megamenu__icon">🍇</div>
+                      <div>
+                        <strong>Mosto Frutos Azules</strong>
+                        <small>Antioxidante y delicioso</small>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="producto-arandanos.html" class="megamenu__item">
+                      <div class="megamenu__icon">🫐</div>
+                      <div>
+                        <strong>Mosto de Arándanos</strong>
+                        <small>100% Puro y Natural</small>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="producto-curcuma.html" class="megamenu__item">
+                      <div class="megamenu__icon">🌿</div>
+                      <div>
+                        <strong>Mosto Cúrcuma</strong>
+                        <small>Antiinflamatorio natural</small>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Column 3: Why Choose Us -->
+              <div class="megamenu__col megamenu__highlights">
+                <h4 class="megamenu__title">Beneficios</h4>
+                <ul class="megamenu__list-simple">
+                  <li>✅ Sube defensas naturalmente</li>
+                  <li>✅ Sin azúcar añadido</li>
+                  <li>✅ 100% Artesanal</li>
+                </ul>
+                <a href="nosotros.html" class="btn btn-sm btn-secondary" style="margin-top: 1rem;">Conocer Más</a>
+              </div>
+            </div>
           </div>
         </div>
         <div class="nav__item">
@@ -57,24 +179,27 @@
   <main>
 
     <!-- ==================== HERO ==================== -->
-    <section class="hero" id="hero">
-      <div class="hero__bg-pattern"></div>
-      <div class="container">
-        <div class="hero__content">
-          <div class="hero__badges">
-            <span class="hero__badge">🍇 100% Natural</span>
-            <span class="hero__badge">🚫 Sin Colorantes</span>
-            <span class="hero__badge">✨ Artesanal</span>
-          </div>
-          <h1>Mosto Don Josué</h1>
-          <p class="lead">Bebidas nutracéuticas artesanales a base de arándanos, agraz y uvas. Frutos azules fusionados en un proceso milenario de más de 6.000 años, sin colorantes, sin saborizantes, sin azúcares añadidos.</p>
-          <div class="hero__actions">
-            <a href="productos.html" class="btn btn-primary btn-lg">Ver Productos</a>
-            <a href="franquicias.html" class="btn btn-secondary btn-lg" style="border-color:rgba(255,255,255,.5); color:#fff;">Franquicias</a>
+    <section class="hero">
+      <div class="container hero__container">
+        <div class="hero__content fade-in">
+          <span class="hero__badge">Emprendimiento Santandereano 🇨🇴</span>
+          <div class="hero__content">
+            <h1 class="hero__title">
+              Potencia tu Salud con <br>
+              <span class="text-gradient">Bebidas Nutracéuticas</span>
+            </h1>
+            <p class="hero__subtitle">
+              El poder antioxidante de los <strong>Frutos Azules</strong> en cada gota.
+              100% Natural, sin azúcar añadido y artesanal. Ideal para subir defensas.
+            </p>
+            <div class="hero__buttons">
+              <a href="productos.html" class="btn btn-primary">Comprar Salud Ahora</a>
+              <a href="#valor" class="btn btn-secondary">Ver Beneficios</a>
+            </div>
           </div>
         </div>
-        <div class="hero__image">
-          <img src="assets/logo.png" alt="Mosto Don Josué — Bebida de frutos azules" width="400" height="460">
+        <div class="hero__image fade-in" style="--i:1">
+          <img src="assets/logo.png" alt="Mosto Don Josué - Logo" class="hero__logo-img">
         </div>
       </div>
     </section>
@@ -82,25 +207,28 @@
     <!-- ==================== PROPUESTA DE VALOR ==================== -->
     <section class="features section" id="valor">
       <div class="container">
-        <div class="section-heading fade-in">
-          <h2>¿Por Qué Mosto Don Josué?</h2>
-          <p>La fusión perfecta de ciencia y tradición milenaria para potenciar tu salud.</p>
+        <div class="section-header text-center">
+          <h2 class="section-title">¿Por qué elegir Mosto Don Josué?</h2>
+          <p class="section-subtitle">Más que una bebida, es bienestar líquido para tu cuerpo.</p>
         </div>
         <div class="grid-3 stagger">
           <div class="feature-card fade-in" style="--i:0">
             <div class="feature-icon">🔬</div>
             <h3>Beneficios Comprobados</h3>
-            <p>Los arándanos y el agraz son reconocidos por elevar defensas, plaquetas y hemoglobina de forma natural.</p>
+            <p>Los arándanos y el agraz son reconocidos por elevar defensas, plaquetas y hemoglobina de forma natural.
+            </p>
           </div>
           <div class="feature-card fade-in" style="--i:1">
             <div class="feature-icon">🍃</div>
             <h3>100% Natural</h3>
-            <p>Sin colorantes artificiales, sin saborizantes añadidos, sin azúcares procesados. Solo frutos y tradición.</p>
+            <p>Sin colorantes artificiales, sin saborizantes añadidos, sin azúcares procesados. Solo frutos y tradición.
+            </p>
           </div>
           <div class="feature-card fade-in" style="--i:2">
             <div class="feature-icon">🏺</div>
             <h3>Proceso Milenario</h3>
-            <p>El mosto tiene más de 6.000 años de existir. Rescatamos este legado ancestral con técnicas artesanales depuradas.</p>
+            <p>El mosto tiene más de 6.000 años de existir. Rescatamos este legado ancestral con técnicas artesanales
+              depuradas.</p>
           </div>
         </div>
       </div>
@@ -114,11 +242,16 @@
         </div>
         <div class="historia__content fade-in fade-in-right">
           <h2>Mi Historia</h2>
-          <p>Viendo la necesidad que las personas tienen cuando la enfermedad ataca por tener las defensas bajas, decidimos buscar ingredientes naturales que al fusionarlos dieran buenos resultados para subir plaquetas y hemoglobina.</p>
+          <p>Viendo la necesidad que las personas tienen cuando la enfermedad ataca por tener las defensas bajas,
+            decidimos buscar ingredientes naturales que al fusionarlos dieran buenos resultados para subir plaquetas y
+            hemoglobina.</p>
           <blockquote>
-            "Yo padecí de una enfermedad en la cual tenía hasta 13 hemorragias y esta fusión fue la que me ayudó a salir. Pero el secreto no es solo la fusión, sino el proceso. Buscamos procesos milenarios, entre esos el Mosto, que tiene más de 6.000 años de existir."
+            "Yo padecí de una enfermedad en la cual tenía hasta 13 hemorragias y esta fusión fue la que me ayudó a
+            salir. Pero el secreto no es solo la fusión, sino el proceso. Buscamos procesos milenarios, entre esos el
+            Mosto, que tiene más de 6.000 años de existir."
           </blockquote>
-          <p>Así nació Mosto Don Josué, una bebida de arándanos, agraz y uvas que combina la sabiduría ancestral con la ciencia moderna para ofrecer bienestar real.</p>
+          <p>Así nació Mosto Don Josué, una bebida de arándanos, agraz y uvas que combina la sabiduría ancestral con la
+            ciencia moderna para ofrecer bienestar real.</p>
           <a href="nosotros.html" class="btn btn-primary">Conocer Más</a>
         </div>
       </div>
@@ -142,7 +275,11 @@
               <h3 class="card__title">Mosto Frutos Azules</h3>
               <p class="card__price">$38.000 <small>/ 1000ml</small></p>
               <div class="card__actions">
-                <a href="producto-frutos-azules.html" class="btn btn-primary btn-sm">Ver Producto</a>
+                <button class="btn btn-primary btn-sm quick-add-btn" data-id="frutos-azules"
+                  data-name="Mosto Frutos Azules" data-price="38000" data-volume="1000ml" data-image="assets/logo.png">
+                  Agregar 🛒
+                </button>
+                <a href="producto-frutos-azules.html" class="btn btn-secondary btn-sm">Ver Detalles</a>
               </div>
             </div>
           </div>
@@ -156,7 +293,11 @@
               <h3 class="card__title">Mosto de Arándanos</h3>
               <p class="card__price">$38.000 <small>/ 1000ml</small></p>
               <div class="card__actions">
-                <a href="producto-arandanos.html" class="btn btn-primary btn-sm">Ver Producto</a>
+                <button class="btn btn-primary btn-sm quick-add-btn" data-id="arandanos" data-name="Mosto de Arándanos"
+                  data-price="38000" data-volume="1000ml" data-image="assets/logo.png">
+                  Agregar 🛒
+                </button>
+                <a href="producto-arandanos.html" class="btn btn-secondary btn-sm">Ver Detalles</a>
               </div>
             </div>
           </div>
@@ -170,7 +311,11 @@
               <h3 class="card__title">Mosto Cúrcuma</h3>
               <p class="card__price">$38.000 <small>/ 1000ml</small></p>
               <div class="card__actions">
-                <a href="producto-curcuma.html" class="btn btn-primary btn-sm">Ver Producto</a>
+                <button class="btn btn-primary btn-sm quick-add-btn" data-id="curcuma" data-name="Mosto Cúrcuma"
+                  data-price="38000" data-volume="1000ml" data-image="assets/logo.png">
+                  Agregar 🛒
+                </button>
+                <a href="producto-curcuma.html" class="btn btn-secondary btn-sm">Ver Detalles</a>
               </div>
             </div>
           </div>
@@ -183,8 +328,10 @@
     <section class="franchise-hero section fade-in">
       <div class="container">
         <h2>Únete a la Red Mosto Don Josué</h2>
-        <p class="lead">Abrimos oportunidades de franquicia con baja inversión en las principales ciudades de Colombia. Sé parte del movimiento de alimentación saludable.</p>
-        <a href="franquicias.html" class="btn btn-green btn-lg" style="margin-top: var(--space-lg);">Conocer Franquicias →</a>
+        <p class="lead">Abrimos oportunidades de franquicia con baja inversión en las principales ciudades de Colombia.
+          Sé parte del movimiento de alimentación saludable.</p>
+        <a href="franquicias.html" class="btn btn-green btn-lg" style="margin-top: var(--space-lg);">Conocer Franquicias
+          →</a>
       </div>
     </section>
 
@@ -196,7 +343,8 @@
       <div class="footer__grid">
         <div class="footer__brand">
           <img src="assets/logo.png" alt="Mosto Don Josué" width="50" height="58">
-          <p>Bebidas nutracéuticas artesanales a base de arándanos, agraz y uvas. 100% natural, sin colorantes, sin saborizantes, sin azúcares añadidos.</p>
+          <p>Bebidas nutracéuticas artesanales a base de arándanos, agraz y uvas. 100% natural, sin colorantes, sin
+            saborizantes, sin azúcares añadidos.</p>
         </div>
         <div>
           <h4>Navegación</h4>
@@ -228,16 +376,62 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p>&copy; 2026 Mosto Don Josué®. Todos los derechos reservados. Emprendimiento Santandereano 🇨🇴</p>
+        <p>&copy; 2026 Mosto Don Josué®. Todos los derechos reservados. 🇨🇴</p>
+        <p style="margin-top: 5px; font-size: 0.8rem; opacity: 0.8;">
+          <a href="https://openagi.com.co" target="_blank" rel="noopener"
+            style="color: inherit; text-decoration: none;">
+            Secops: Openagi.com.co by Mr.Linux
+          </a>
+        </p>
       </div>
     </div>
   </footer>
 
   <!-- WhatsApp Float -->
-  <a href="https://wa.me/573001234567?text=Hola%2C%20quiero%20información%20sobre%20Mosto%20Don%20Josué" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">💬</a>
+  <a href="https://wa.me/573001234567?text=Hola%2C%20quiero%20información%20sobre%20Mosto%20Don%20Josué"
+    class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">💬</a>
 
   <!-- Scroll Top -->
   <button class="scroll-top" aria-label="Volver arriba">↑</button>
+
+  <!-- ==================== CART DRAWER ==================== -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer__header">
+      <h3>Tu Carrito <span id="drawer-count">(0)</span></h3>
+      <button class="cart-drawer__close" aria-label="Cerrar carrito">✕</button>
+    </div>
+
+    <div class="cart-drawer__body" id="drawer-items">
+      <!-- Items injected via JS -->
+      <div class="drawer-empty-state">
+        <p>Tu carrito está vacío</p>
+        <a href="productos.html" class="btn btn-sm btn-primary">Ver Productos</a>
+      </div>
+    </div>
+
+    <div class="cart-drawer__footer">
+      <div class="drawer-summary">
+        <div class="flex-between">
+          <span>Subtotal</span>
+          <strong id="drawer-total">$0</strong>
+        </div>
+      </div>
+
+      <div class="drawer-checkout">
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label for="drawer-city" class="form-label" style="font-size: 0.8rem;">📍 Ciudad de entrega:</label>
+          <select id="drawer-city" class="form-select form-select-sm">
+            <option value="">Seleccionar ciudad...</option>
+            <!-- Populated by JS -->
+          </select>
+        </div>
+        <button id="drawer-checkout-btn" class="btn btn-whatsapp btn-block" style="width: 100%;">
+          Completar pedido en WhatsApp 📲
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- Scripts -->
   <script src="js/theme.js"></script>
@@ -245,6 +439,23 @@
   <script src="js/checkout.js"></script>
   <script src="js/nav.js"></script>
   <script src="js/main.js"></script>
+  <!-- Drawer Logic (Inline for now or moved to main.js) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initialize city selector in drawer
+      const citySelect = document.getElementById('drawer-city');
+      if (citySelect && Checkout) {
+        Checkout.getCities().forEach(city => {
+          const opt = document.createElement('option');
+          opt.value = city.value;
+          opt.textContent = city.label;
+          citySelect.appendChild(opt);
+        });
+      }
+    });
+  </script>
 
 </body>
+
 </html>
+```

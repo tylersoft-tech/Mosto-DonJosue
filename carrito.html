@@ -9,35 +9,118 @@
         content="Tu carrito de compras Mosto Don Josué. Revisa tus productos, selecciona tu ciudad y finaliza tu pedido por WhatsApp.">
     <link rel="icon" href="assets/logo.png" type="image/png">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="canonical" href="https://mostodonjosue.com/carrito">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mostodonjosue.com/carrito">
+    <meta property="og:title" content="Tu Carrito 🛒 | Finaliza tu Pedido">
+    <meta property="og:description" content="Estás a un paso de recibir bienestar en casa. ¡Completa tu compra! 🚚">
+    <meta property="og:image" content="https://mostodonjosue.com/assets/social-share.png">
+    <!-- Umami Analytics -->
+    <script defer src="https://analytics.openagi.com/script.js" data-website-id="24740ea6-a1bb-490c-aa01-a66119e47dde"></script>
 </head>
 
 <body>
 
     <!-- HEADER -->
+    <!-- ==================== HEADER ==================== -->
     <header class="header" id="header">
         <div class="container">
-            <a href="index.html" class="header__logo"><img src="assets/logo.png" alt="Mosto Don Josué" width="48"
-                    height="56"></a>
+            <a href="index.html" class="header__logo" aria-label="Inicio">
+                <img src="assets/logo.png" alt="Mosto Don Josué" width="48" height="56">
+            </a>
+
             <nav class="nav" id="main-nav" aria-label="Navegación principal">
-                <div class="nav__item"><a href="index.html" class="nav__link">Inicio</a></div>
+                <div class="nav__item">
+                    <a href="index.html" class="nav__link">Inicio</a>
+                </div>
                 <div class="nav__item">
                     <a href="productos.html" class="nav__link nav__has-sub">Productos <span
                             class="nav__toggle-sub">▼</span></a>
-                    <div class="nav__submenu">
-                        <a href="producto-frutos-azules.html" class="nav__link">Mosto Frutos Azules</a>
-                        <a href="producto-arandanos.html" class="nav__link">Mosto de Arándanos</a>
-                        <a href="producto-curcuma.html" class="nav__link">Mosto Cúrcuma</a>
+                    <div class="nav__megamenu">
+                        <div class="container megamenu__grid">
+                            <!-- Column 1: Featured Image / Promo -->
+                            <div class="megamenu__col megamenu__featured">
+                                <div class="megamenu__image">
+                                    <img src="assets/logo.png" alt="Mosto Don Josué" width="200" height="200">
+                                    <div class="megamenu__caption">
+                                        <span>Nueva Cosecha</span>
+                                        <h4>Edición Especial</h4>
+                                        <a href="productos.html" class="link-arrow">Ver Todo →</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Column 2: Product Categories -->
+                            <div class="megamenu__col">
+                                <h4 class="megamenu__title">Nuestros Mostos</h4>
+                                <ul class="megamenu__list">
+                                    <li>
+                                        <a href="producto-frutos-azules.html" class="megamenu__item">
+                                            <div class="megamenu__icon">🍇</div>
+                                            <div>
+                                                <strong>Mosto Frutos Azules</strong>
+                                                <small>Antioxidante y delicioso</small>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="producto-arandanos.html" class="megamenu__item">
+                                            <div class="megamenu__icon">🫐</div>
+                                            <div>
+                                                <strong>Mosto de Arándanos</strong>
+                                                <small>100% Puro y Natural</small>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="producto-curcuma.html" class="megamenu__item">
+                                            <div class="megamenu__icon">🌿</div>
+                                            <div>
+                                                <strong>Mosto Cúrcuma</strong>
+                                                <small>Antiinflamatorio natural</small>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Column 3: Why Choose Us -->
+                            <div class="megamenu__col megamenu__highlights">
+                                <h4 class="megamenu__title">Beneficios</h4>
+                                <ul class="megamenu__list-simple">
+                                    <li>✅ Sube defensas naturalmente</li>
+                                    <li>✅ Sin azúcar añadido</li>
+                                    <li>✅ 100% Artesanal</li>
+                                </ul>
+                                <a href="nosotros.html" class="btn btn-sm btn-secondary"
+                                    style="margin-top: 1rem;">Conocer
+                                    Más</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="nav__item"><a href="nosotros.html" class="nav__link">Nosotros</a></div>
-                <div class="nav__item"><a href="franquicias.html" class="nav__link">Franquicias</a></div>
-                <div class="nav__item"><a href="contacto.html" class="nav__link">Contacto</a></div>
+                <div class="nav__item">
+                    <a href="nosotros.html" class="nav__link">Nosotros</a>
+                </div>
+                <div class="nav__item">
+                    <a href="franquicias.html" class="nav__link">Franquicias</a>
+                </div>
+                <div class="nav__item">
+                    <a href="contacto.html" class="nav__link">Contacto</a>
+                </div>
             </nav>
+
             <div class="header__actions">
                 <button class="dark-toggle" aria-label="Cambiar modo oscuro">🌙</button>
-                <a href="carrito.html" class="cart-btn" aria-label="Ver carrito">🛒<span class="cart-badge">0</span></a>
-                <button class="hamburger" id="hamburger"
-                    aria-label="Abrir menú"><span></span><span></span><span></span></button>
+                <a href="carrito.html" class="cart-btn" aria-label="Ver carrito">
+                    🛒
+                    <span class="cart-badge" id="cart-badge">0</span>
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
         </div>
     </header>
@@ -140,13 +223,58 @@
             </div>
             <div class="footer__bottom">
                 <p>&copy; 2026 Mosto Don Josué®. Todos los derechos reservados. 🇨🇴</p>
+                <p style="margin-top: 5px; font-size: 0.8rem; opacity: 0.8;">
+                    <a href="https://openagi.com.co" target="_blank" rel="noopener"
+                        style="color: inherit; text-decoration: none;">
+                        Secops: Openagi.com.co by Mr.Linux
+                    </a>
+                </p>
             </div>
-        </div>
     </footer>
 
     <a href="https://wa.me/573001234567" class="whatsapp-float" target="_blank" rel="noopener"
         aria-label="WhatsApp">💬</a>
     <button class="scroll-top" aria-label="Volver arriba">↑</button>
+
+    <!-- ==================== CART DRAWER ==================== -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-drawer__header">
+            <h3>Tu Carrito <span id="drawer-count">(0)</span></h3>
+            <button class="cart-drawer__close" aria-label="Cerrar carrito">✕</button>
+        </div>
+
+        <div class="cart-drawer__body" id="drawer-items">
+            <!-- Items injected via JS -->
+            <div class="drawer-empty-state">
+                <p>Tu carrito está vacío</p>
+                <a href="productos.html" class="btn btn-sm btn-primary">Ver Productos</a>
+            </div>
+        </div>
+
+        <div class="cart-drawer__footer">
+            <div class="drawer-summary">
+                <div class="flex-between">
+                    <span>Subtotal</span>
+                    <strong id="drawer-total">$0</strong>
+                </div>
+            </div>
+
+            <div class="drawer-checkout">
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <label for="drawer-city" class="form-label" style="font-size: 0.8rem;">📍 Ciudad de
+                        entrega:</label>
+                    <select id="drawer-city" class="form-select form-select-sm">
+                        <option value="">Seleccionar ciudad...</option>
+                        <!-- Populated by JS -->
+                    </select>
+                </div>
+                <button id="drawer-checkout-btn" class="btn btn-whatsapp btn-block" style="width: 100%;">
+                    Completar pedido en WhatsApp 📲
+                </button>
+            </div>
+        </div>
+    </div>
 
     <script src="js/theme.js"></script>
     <script src="js/cart.js"></script>

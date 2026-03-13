@@ -33,12 +33,12 @@ const Cart = (() => {
       existing.qty += product.qty || 1;
     } else {
       cart.push({
-        id:     product.id,
-        name:   product.name,
+        id: product.id,
+        name: product.name,
         volume: product.volume,
-        price:  product.price,
-        image:  product.image || '',
-        qty:    product.qty || 1
+        price: product.price,
+        image: product.image || '',
+        qty: product.qty || 1
       });
     }
 
@@ -99,17 +99,37 @@ const Cart = (() => {
   }
 
   /** Toast notification */
+  /** Premium Toast Notification */
   function _showToast(message) {
     let toast = document.getElementById('cart-toast');
     if (!toast) {
       toast = document.createElement('div');
       toast.id = 'cart-toast';
       toast.className = 'toast';
+      // Icon container
+      const icon = document.createElement('div');
+      icon.className = 'toast__icon';
+      icon.textContent = '✅';
+      toast.appendChild(icon);
+      // Message container
+      const msg = document.createElement('div');
+      msg.className = 'toast__msg';
+      toast.appendChild(msg);
       document.body.appendChild(toast);
     }
-    toast.textContent = message;
+    // Update message
+    toast.querySelector('.toast__msg').textContent = message;
+
+    // Reset animation
+    toast.classList.remove('show');
+    void toast.offsetWidth; // Trigger reflow
     toast.classList.add('show');
-    setTimeout(() => toast.classList.remove('show'), 2500);
+
+    // Hide after delay
+    if (toast.timeoutId) clearTimeout(toast.timeoutId);
+    toast.timeoutId = setTimeout(() => {
+      toast.classList.remove('show');
+    }, 4000); // 4 seconds
   }
 
   /** Format price as Colombian COP */
@@ -117,8 +137,128 @@ const Cart = (() => {
     return '$' + price.toLocaleString('es-CO');
   }
 
-  /* --- Init badge on load --- */
-  document.addEventListener('DOMContentLoaded', _updateBadge);
+  /* --- Drawer UI --- */
+  const drawer = document.getElementById('cart-drawer');
+  const overlay = document.getElementById('cart-overlay');
+  const drawerItems = document.getElementById('drawer-items');
+  const drawerCount = document.getElementById('drawer-count');
+  const drawerTotal = document.getElementById('drawer-total');
+  const citySelect = document.getElementById('drawer-city');
+  const checkoutBtn = document.getElementById('drawer-checkout-btn');
 
-  return { add, updateQty, remove, clear, getAll, getTotal, getCount, formatPrice };
+  function openDrawer() {
+    if (drawer && overlay) {
+      drawer.classList.add('open');
+      overlay.classList.add('open');
+      renderDrawer();
+    }
+  }
+
+  function closeDrawer() {
+    if (drawer && overlay) {
+      drawer.classList.remove('open');
+      overlay.classList.remove('open');
+    }
+  }
+
+  function renderDrawer() {
+    if (!drawerItems) return;
+    const cart = _get();
+    drawerCount.textContent = `(${getCount()})`;
+    drawerTotal.textContent = formatPrice(getTotal());
+
+    if (cart.length === 0) {
+      drawerItems.innerHTML = `
+        <div class="drawer-empty-state">
+          <div style="font-size:3rem; margin-bottom:1rem;">🛒</div>
+          <p>Tu carrito está vacío</p>
+          <a href="productos.html" class="btn btn-sm btn-primary" onclick="Cart.close()">Ver Productos</a>
+        </div>`;
+      return;
+    }
+
+    drawerItems.innerHTML = cart.map(item => `
+      <div class="drawer-item">
+        <div class="drawer-item__image">
+          <img src="${item.image}" alt="${item.name}">
+        </div>
+        <div class="drawer-item__details">
+          <h4>${item.name}</h4>
+          <span class="drawer-item__vol">${item.volume}</span>
+          <div class="drawer-item__price">${formatPrice(item.price * item.qty)}</div>
+          
+          <div class="drawer-item__controls">
+            <button class="drawer-qty-btn minus" data-id="${item.id}" data-volume="${item.volume}">−</button>
+            <span class="drawer-qty-val">${item.qty}</span>
+            <button class="drawer-qty-btn plus" data-id="${item.id}" data-volume="${item.volume}">+</button>
+            <button class="drawer-remove-btn" data-id="${item.id}" data-volume="${item.volume}">Eliminar</button>
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    // Re-attach listeners for dynamic elements
+    drawerItems.querySelectorAll('.minus').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = cart.find(i => i.id === btn.dataset.id && i.volume === btn.dataset.volume);
+        if (item) updateQty(item.id, item.volume, item.qty - 1);
+      });
+    });
+
+    drawerItems.querySelectorAll('.plus').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = cart.find(i => i.id === btn.dataset.id && i.volume === btn.dataset.volume);
+        if (item) updateQty(item.id, item.volume, item.qty + 1);
+      });
+    });
+
+    drawerItems.querySelectorAll('.drawer-remove-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        remove(btn.dataset.id, btn.dataset.volume);
+      });
+    });
+  }
+
+  function _initDrawerListeners() {
+    if (drawer) {
+      document.querySelector('.cart-drawer__close')?.addEventListener('click', closeDrawer);
+    }
+    if (overlay) {
+      overlay.addEventListener('click', closeDrawer);
+    }
+
+    // Header (and other) cart buttons override
+    const cartBtns = document.querySelectorAll('.cart-btn, .header .cart-btn');
+    cartBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openDrawer();
+      });
+    });
+
+    // Checkout button logic
+    if (checkoutBtn && citySelect) {
+      checkoutBtn.addEventListener('click', () => {
+        const city = citySelect.value;
+        if (typeof Checkout !== 'undefined') {
+          Checkout.send(city);
+        } else {
+          console.error('Checkout module not loaded');
+        }
+      });
+    }
+  }
+
+  /* --- Init badge and drawer on load --- */
+  document.addEventListener('DOMContentLoaded', () => {
+    _updateBadge();
+    _initDrawerListeners();
+  });
+
+  // Also update drawer when cart changes
+  document.addEventListener('cart:updated', () => {
+    renderDrawer();
+  });
+
+  return { add, updateQty, remove, clear, getAll, getTotal, getCount, formatPrice, open: openDrawer, close: closeDrawer };
 })();

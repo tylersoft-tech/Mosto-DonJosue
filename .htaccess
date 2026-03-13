@@ -1,0 +1,55 @@
+# ==================================================================
+# HOSTINGER / APACHE CONFIGURATION
+# ==================================================================
+
+# 1. CLEAN URLS (Hybrid Approach)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # A) EXTERNAL REDIRECT: If user requests .html, redirect to extensionless URL
+    # This makes the address bar look "friendly" even if the link had .html
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.html [NC]
+    RewriteRule ^ %1 [R=301,L]
+
+    # B) INTERNAL REWRITE: If user requests extensionless URL, serve the .html file
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.html -f
+    RewriteRule ^(.*?)/?$ $1.html [L]
+</IfModule>
+
+# 2. BROWSER CACHING
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+
+    # Images
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/webp "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+
+    # CSS / JS
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+    
+    # HTML
+    ExpiresByType text/html "access plus 1 hour"
+</IfModule>
+
+# 3. GZIP COMPRESSION
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# 4. SECURITY HEADERS (Basic)
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>

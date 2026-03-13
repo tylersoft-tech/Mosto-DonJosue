@@ -22,7 +22,7 @@ const Nav = (() => {
         // Close menu on link click (mobile)
         nav.querySelectorAll('.nav__link:not(.nav__has-sub)').forEach(link => {
             link.addEventListener('click', () => {
-                if (window.innerWidth < 1024) {
+                if (window.matchMedia("(max-width: 1023px)").matches) {
                     hamburger.classList.remove('active');
                     nav.classList.remove('active');
                     document.body.style.overflow = '';
@@ -30,7 +30,7 @@ const Nav = (() => {
             });
         });
 
-        // Submenu toggles (mobile)
+        // Submenu toggles (mobile arrow click)
         subToggles.forEach(toggle => {
             toggle.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -43,8 +43,9 @@ const Nav = (() => {
         // For parent links that have submenus — prevent navigation on mobile
         document.querySelectorAll('.nav__has-sub').forEach(link => {
             link.addEventListener('click', (e) => {
-                if (window.innerWidth < 1024) {
+                if (window.matchMedia("(max-width: 1023px)").matches) {
                     e.preventDefault();
+                    e.stopPropagation(); // Critical to stop bubbling
                     const parent = link.closest('.nav__item');
                     parent.classList.toggle('open');
                 }
@@ -63,10 +64,12 @@ const Nav = (() => {
 
         // Close mobile menu on resize to desktop
         window.addEventListener('resize', () => {
-            if (window.innerWidth >= 1024) {
+            if (window.matchMedia("(min-width: 1024px)").matches) {
                 hamburger.classList.remove('active');
                 nav.classList.remove('active');
                 document.body.style.overflow = '';
+                // Also close submenus to reset state
+                document.querySelectorAll('.nav__item.open').forEach(el => el.classList.remove('open'));
             }
         });
     }
